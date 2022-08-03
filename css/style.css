@@ -1,0 +1,90 @@
+.header{
+    margin-top: 50px;
+}
+.inlane{
+    display: inline-block;
+}
+.btn-cliente{
+    margin-left: 40px;
+}
+.nCliente{
+    width: 280px;
+}
+.pedidos_tittle{
+    margin-bottom: 30px;
+}
+.tabla_cliente{
+    margin: 10px 10px 10px 10px;
+    border-style: groove;
+    border-radius: 15px;
+    background-color: white;
+}
+#tablasClientes{
+    margin-left: 10px;
+    margin-right: 10px;
+    font-family: Arial;
+}
+#tablaTotales{
+    margin-top: 50px;
+    border-style: groove;
+    border-radius: 15px;
+    background-color: white;
+    margin-left: 10px;
+    margin-right: 10px;
+    font-family: Arial;
+}
+.align_center{
+    text-align:center;
+}
+.align_end{
+    text-align:end;
+}
+.backg{
+    background: white;
+}
+.table td, .table th{
+    padding: 0;
+}
+.tittle_color{
+    color: #25b9ff;
+    font-weight: bold;
+}
+.tot{
+    padding-top: 3px !important;
+    padding-bottom: 3px !important;
+}
+#totals{
+    padding-left: 2%;
+    padding-right: 2%;
+}
+.downloadList{
+    padding-left: 8px;
+    padding-right: 8px;
+}
+.large_font{
+    font-size: large;
+}
+
+
+@media screen and (max-width: 500px) {
+    .tablaProductos{
+        font-size: larger;
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+    .quantity{
+        width: 70px;
+        display: inline-block; 
+    }
+}
+@media screen and (min-width: 501px) {
+    .tablaProductos{
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+    .quantity {
+        width: 70px;
+        display: inline-block;
+        height: 25px;
+    }
+}

@@ -23,7 +23,7 @@ $dbname = "id16779907_pedidos_ray";
         `completado` int(11) NOT NULL DEFAULT 0
       ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci';
     if ($conn->query($sql33)) {
-        echo "success"
+        echo "success";
     } else {
         echo "error";
     }

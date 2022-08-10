@@ -385,8 +385,8 @@
 <?php
     function obtenerClientes(){
         $servername = "pedidosray-server.mysql.database.azure.com";
-        $username = "bpgjuzgedi";
-        $password = ".,05zaxscd";
+        $username = "xlpoxuildk";
+        $password = "17US2Z3XPENOSC1G$";
         $dbname = "id16779907_pedidos_ray";
 
         // Create connection
@@ -417,8 +417,8 @@
 
     function verificarPedidos(){
         $servername = "pedidosray-server.mysql.database.azure.com";
-        $username = "bpgjuzgedi";
-        $password = ".,05zaxscd";
+        $username = "xlpoxuildk";
+        $password = "17US2Z3XPENOSC1G$";
         $dbname = "id16779907_pedidos_ray";
         $existen = false;
         // Create connection
@@ -448,8 +448,8 @@
 
     function mostrarPedidos($fecha){
         $servername = "pedidosray-server.mysql.database.azure.com";
-        $username = "bpgjuzgedi";
-        $password = ".,05zaxscd";
+        $username = "xlpoxuildk";
+        $password = "17US2Z3XPENOSC1G$";
         $dbname = "id16779907_pedidos_ray";
 
         $rows = "";
@@ -555,8 +555,8 @@
 
     function TotalProductos($fecha){
         $servername = "pedidosray-server.mysql.database.azure.com";
-        $username = "bpgjuzgedi";
-        $password = ".,05zaxscd";
+        $username = "xlpoxuildk";
+        $password = "17US2Z3XPENOSC1G$";
         $dbname = "id16779907_pedidos_ray";
 
         $rows = "";

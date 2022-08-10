@@ -8,8 +8,8 @@ if($cliente = $_POST["data_id_cliente"]){
     $id_pedido = $dataCliente[1];
 
     $servername = "pedidosray-server.mysql.database.azure.com";
-    $username = "bpgjuzgedi";
-    $password = ".,05zaxscd";
+    $username = "xlpoxuildk";
+    $password = "17US2Z3XPENOSC1G$";
     $dbname = "id16779907_pedidos_ray";
     
     

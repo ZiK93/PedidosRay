@@ -1,9 +1,9 @@
 <?php  
 
 
-$servername = "pedidosray-server.mysql.database.azure.com";
-$username = "xlpoxuildk";
-$password = "17US2Z3XPENOSC1G$";
+$servername = "testmysqlpedidosray.mysql.database.azure.com";
+$username = "pedidosray";
+$password = ".,05zaxscdvf";
 $dbname = "id16779907_pedidos_ray";
     
     

@@ -4,7 +4,7 @@
 $servername = "testmysqlpedidosray.mysql.database.azure.com";
 $username = "pedidosray";
 $password = ".,05zaxscdvf";
-$dbname = "id16779907_pedidos_ray";
+$dbname = "id16779907_db2";
     $conn = new mysqli($servername, $username, $password, $dbname);
     if ($conn->connect_error) {
        die("Connection failed: " . $conn->connect_error);

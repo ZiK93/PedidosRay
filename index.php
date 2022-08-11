@@ -575,6 +575,7 @@
             }
         } 
 
+        echo 'SELECT nombre, slug_producto, cantidad FROM new_view where fecha = "'.getActualDate().'"';
         if ($result = $conn -> query('SELECT nombre, slug_producto, cantidad FROM new_view where fecha = "'.getActualDate().'"')) {
             while($obj = $result->fetch_object()){
                 $producto_cantidad[$obj->slug_producto] = $obj->cantidad;

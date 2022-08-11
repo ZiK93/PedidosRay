@@ -709,7 +709,7 @@
                     $nombreCliente = $obj->nombre;
                 }
             }
-            var_dump($result);
+            var_dump($nombreCliente);
             
             $conn->close();
             $DataCliente = array("nombre" => $nombreCliente, "id_cliente" => $id_cliente);

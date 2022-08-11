@@ -583,6 +583,7 @@
         $cant_productos = count($producto_cantidad);
         $mitad = round($cant_productos/2);
         $c1 = 1;
+        var_dump($producto_cantidad);
         
         $rows .= '<h4 class="align_center">Total de productos</h4><div class="row" id="totals">';  
 

@@ -575,7 +575,9 @@
             }
         } 
         $result2 = $conn -> query('SELECT prod.nombre, d.slug_producto, SUM(d.cantidad) as cantidad FROM cliente c INNER JOIN pedido p ON p.fk_cliente = c.id_cliente INNER JOIN detalle d ON d.fk_pedido = p.id_pedido INNER JOIN producto prod ON prod.slug = d.slug_producto WHERE p.fecha = "'.getActualDate().'" GROUP BY d.slug_producto ORDER BY prod.nombre ASC');
-        echo "resultado:<br>".$result."<br><br><br>";
+        echo "resultado:<br>";
+        var_dump($result);
+        echo "<br><br><br>";
         if ($result = $conn -> query('SELECT prod.nombre, d.slug_producto, SUM(d.cantidad) as cantidad FROM cliente c INNER JOIN pedido p ON p.fk_cliente = c.id_cliente INNER JOIN detalle d ON d.fk_pedido = p.id_pedido INNER JOIN producto prod ON prod.slug = d.slug_producto WHERE p.fecha = "'.getActualDate().'" GROUP BY d.slug_producto ORDER BY prod.nombre ASC')) {
             while($obj = $result->fetch_object()){
                 $producto_cantidad[$obj->slug_producto] = $obj->cantidad;

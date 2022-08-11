@@ -467,6 +467,7 @@
                 $cliente_pedido[$obj->fk_cliente] = $obj->id_pedido;
             }
         } 
+        var_dump($cliente_pedido);
 
         if ($result = $conn -> query('SELECT slug, nombre FROM producto WHERE 1')) {
             while($obj = $result->fetch_object()){

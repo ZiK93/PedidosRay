@@ -387,7 +387,7 @@
         $servername = "testmysqlpedidosray.mysql.database.azure.com";
         $username = "pedidosray";
         $password = ".,05zaxscdvf";
-        $dbname = "id16779907_pedidos_ray";
+        $dbname = "id16779907_db2";
 
         // Create connection
         $conn = new mysqli($servername, $username, $password, $dbname);
@@ -419,7 +419,7 @@
         $servername = "testmysqlpedidosray.mysql.database.azure.com";
         $username = "pedidosray";
         $password = ".,05zaxscdvf";
-        $dbname = "id16779907_pedidos_ray";
+        $dbname = "id16779907_db2";
         $existen = false;
         // Create connection
         $conn = new mysqli($servername, $username, $password, $dbname);
@@ -450,7 +450,7 @@
         $servername = "testmysqlpedidosray.mysql.database.azure.com";
         $username = "pedidosray";
         $password = ".,05zaxscdvf";
-        $dbname = "id16779907_pedidos_ray";
+        $dbname = "id16779907_db2";
 
         $rows = "";
         $cliente_pedido = array();
@@ -557,7 +557,7 @@
         $servername = "testmysqlpedidosray.mysql.database.azure.com";
         $username = "pedidosray";
         $password = ".,05zaxscdvf";
-        $dbname = "id16779907_pedidos_ray";
+        $dbname = "id16779907_db2";
 
         $rows = "";
         $producto_slug_nombre = array();

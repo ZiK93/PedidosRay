@@ -392,6 +392,7 @@
 
         // Create connection
         $conn = new mysqli($servername, $username, $password, $dbname);
+        $acentos = $conn->query("SET NAMES 'utf8'");
         // Check connection
         if ($conn->connect_error) {
             die("Connection failed: " . $conn->connect_error);
@@ -424,6 +425,7 @@
         $existen = false;
         // Create connection
         $conn = new mysqli($servername, $username, $password, $dbname);
+        $acentos = $conn->query("SET NAMES 'utf8'");
         // Check connection
         if ($conn->connect_error) {
             die("Connection failed: " . $conn->connect_error);
@@ -459,6 +461,7 @@
         $cliente_id_nombre = array();
 
         $conn = new mysqli($servername, $username, $password, $dbname);
+        $acentos = $conn->query("SET NAMES 'utf8'");
         if ($conn->connect_error) {
             die("Connection failed: " . $conn->connect_error);
         }
@@ -565,6 +568,7 @@
         $producto_cantidad = array();
 
         $conn = new mysqli($servername, $username, $password, $dbname);
+        $acentos = $conn->query("SET NAMES 'utf8'");
         if ($conn->connect_error) {
             die("Connection failed: " . $conn->connect_error);
         }

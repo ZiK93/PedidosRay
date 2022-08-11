@@ -700,6 +700,7 @@
     
             // Create connection
             $conn = new mysqli($servername, $username, $password, $dbname);
+        $acentos = $conn->query("SET NAMES 'utf8'");
             // Check connection
             if ($conn->connect_error) {
                 die("Connection failed: " . $conn->connect_error);
@@ -731,6 +732,7 @@
     
             // Create connection
             $conn = new mysqli($servername, $username, $password, $dbname);
+        $acentos = $conn->query("SET NAMES 'utf8'");
             // Check connection
             if ($conn->connect_error) {
                 die("Connection failed: " . $conn->connect_error);

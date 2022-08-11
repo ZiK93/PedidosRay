@@ -387,7 +387,7 @@
         $servername = "testmysqlpedidosray.mysql.database.azure.com";
         $username = "pedidosray";
         $password = ".,05zaxscdvf";
-        $dbname = "id16779907_db2";
+        $dbname = "id16779907_pedidos_ray";
 
         // Create connection
         $conn = new mysqli($servername, $username, $password, $dbname);
@@ -419,7 +419,7 @@
         $servername = "testmysqlpedidosray.mysql.database.azure.com";
         $username = "pedidosray";
         $password = ".,05zaxscdvf";
-        $dbname = "id16779907_db2";
+        $dbname = "id16779907_pedidos_ray";
         $existen = false;
         // Create connection
         $conn = new mysqli($servername, $username, $password, $dbname);
@@ -450,7 +450,7 @@
         $servername = "testmysqlpedidosray.mysql.database.azure.com";
         $username = "pedidosray";
         $password = ".,05zaxscdvf";
-        $dbname = "id16779907_db2";
+        $dbname = "id16779907_pedidos_ray";
 
         $rows = "";
         $cliente_pedido = array();
@@ -467,7 +467,6 @@
                 $cliente_pedido[$obj->fk_cliente] = $obj->id_pedido;
             }
         } 
-        var_dump($cliente_pedido);
 
         if ($result = $conn -> query('SELECT slug, nombre FROM producto WHERE 1')) {
             while($obj = $result->fetch_object()){
@@ -558,7 +557,7 @@
         $servername = "testmysqlpedidosray.mysql.database.azure.com";
         $username = "pedidosray";
         $password = ".,05zaxscdvf";
-        $dbname = "id16779907_db2";
+        $dbname = "id16779907_pedidos_ray";
 
         $rows = "";
         $producto_slug_nombre = array();
@@ -575,12 +574,7 @@
                 $producto_slug_nombre[$obj->slug] = $obj->nombre;
             }
         } 
-
-        echo 'SELECT nombre, slug_producto, cantidad FROM new_view where fecha = "'.getActualDate().'"';
-        $result = $conn -> query('SELECT nombre, slug_producto, cantidad FROM new_view where fecha = "'.getActualDate().'"');
-        var_dump($result);
-        echo "asdasd";
-        if ($result) {
+        if ($result = $conn -> query('SELECT prod.nombre, d.slug_producto, SUM(d.cantidad) as cantidad FROM cliente c INNER JOIN pedido p ON p.fk_cliente = c.id_cliente INNER JOIN detalle d ON d.fk_pedido = p.id_pedido INNER JOIN producto prod ON prod.slug = d.slug_producto WHERE p.fecha = "'.getActualDate().'" GROUP BY prod.nombre ORDER BY prod.nombre ASC')) {
             while($obj = $result->fetch_object()){
                 $producto_cantidad[$obj->slug_producto] = $obj->cantidad;
             }

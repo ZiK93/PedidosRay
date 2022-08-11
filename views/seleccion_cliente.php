@@ -13,7 +13,7 @@
         ?>
             <script src="/js/js.js"></script>
             <div class="d-flex justify-content-center header">
-                <h2><?php echo $datos_cliente["nombre"]; ?></h2>
+                <h2><?php header('Content-Type: text/html; charset=UTF-8'); echo $datos_cliente["nombre"]; ?></h2>
             </div>
             <form action="/controller/procesar_pedido.php" method="post" id="products_list">
                 <div class="container">

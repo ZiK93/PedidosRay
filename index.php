@@ -578,6 +578,7 @@
             while($obj = $result->fetch_object()){
                 $producto_cantidad[$obj->slug_producto] = $obj->cantidad;
             }
+            echo $result."<br><br><br>";
         }
         $conn->close();
         $cant_productos = count($producto_cantidad);

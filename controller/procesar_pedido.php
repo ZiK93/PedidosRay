@@ -14,7 +14,8 @@ if($id_cliente = $_POST["data_id_cliente"]){
     }
 
     $sql33 = 'SELECT id_pedido FROM pedido WHERE fk_cliente = '.$id_cliente.' AND fecha = "'.getActualDate().'"';
-    if ($conn->query($sql33)->num_rows < 1) {
+    $myquery = $conn->query($sql33);
+    if ($myquery->num_rows < 1 || $myquery == NULL) {
         $sql = 'INSERT INTO pedido (fk_cliente,fecha) VALUES ('.$id_cliente.',"'.getActualDate().'")';
         if ($conn->query($sql) === TRUE) {
             if ($result = $conn -> query("select * from pedido order by id_pedido desc limit 1")) {

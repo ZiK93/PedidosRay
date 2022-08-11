@@ -583,6 +583,8 @@
         $cant_productos = count($producto_cantidad);
         $mitad = round($cant_productos/2);
         $c1 = 1;
+        echo getActualDate()."<br>";
+        echo 'SELECT prod.nombre, d.slug_producto, SUM(d.cantidad) as cantidad FROM cliente c INNER JOIN pedido p ON p.fk_cliente = c.id_cliente INNER JOIN detalle d ON d.fk_pedido = p.id_pedido INNER JOIN producto prod ON prod.slug = d.slug_producto WHERE p.fecha = "'.getActualDate().'" GROUP BY d.slug_producto ORDER BY prod.nombre ASC'."<br>";
         var_dump($producto_cantidad);
         
         $rows .= '<h4 class="align_center">Total de productos</h4><div class="row" id="totals">';  

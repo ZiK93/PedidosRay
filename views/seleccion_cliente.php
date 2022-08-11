@@ -1,5 +1,6 @@
 <html>
     <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
         <title>Nuevo Pedido</title>
         <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
@@ -13,7 +14,7 @@
         ?>
             <script src="/js/js.js"></script>
             <div class="d-flex justify-content-center header">
-                <h2><?php header('Content-Type: text/html; charset=UTF-8'); echo $datos_cliente["nombre"]; ?></h2>
+                <h2><?php echo $datos_cliente["nombre"]; ?></h2>
             </div>
             <form action="/controller/procesar_pedido.php" method="post" id="products_list">
                 <div class="container">

@@ -708,7 +708,8 @@
                 while($obj = $result->fetch_object()){
                     $nombreCliente = $obj->nombre;
                 }
-            } 
+            }
+            var_dump($result);
             
             $conn->close();
             $DataCliente = array("nombre" => $nombreCliente, "id_cliente" => $id_cliente);

@@ -291,6 +291,14 @@
                             <div>
                                 <input class="form-control quantity" type="number" min="0" max="999" id="natilla_galon" name="natilla_galon" value="<?php if(isset($productos["natilla_galon"])){echo $productos["natilla_galon"];} else {echo "0";} ?>">
                                 <label for="natilla_galon">Natilla Galón</label>
+                            </div>
+                            <div>
+                                <input class="form-control quantity" type="number" min="0" max="999" id="natilla100gsal" name="natilla100gsal" value="<?php if(isset($productos["natilla100gsal"])){echo $productos["natilla100gsal"];} else {echo "0";} ?>">
+                                <label for="natilla100gsal">Natilla 100g con sal</label>
+                            </div>
+                            <div>
+                                <input class="form-control quantity" type="number" min="0" max="999" id="natilla100gnosal" name="natilla100gnosal" value="<?php if(isset($productos["natilla100gnosal"])){echo $productos["natilla100gnosal"];} else {echo "0";} ?>">
+                                <label for="natilla100gnosal">Natilla 100g sin sal</label>
                             </div><br>
                             <div>
                                 <input class="form-control quantity" type="number" min="0" max="999" id="aderezo_PCA" name="aderezo_PCA" value="<?php if(isset($productos["aderezo_PCA"])){echo $productos["aderezo_PCA"];} else {echo "0";} ?>">

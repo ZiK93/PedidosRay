@@ -293,6 +293,14 @@
                             <div>
                                 <input class="form-control quantity" type="number" min="0" max="999" id="natilla_galon" name="natilla_galon" value="0">
                                 <label for="natilla_galon">Natilla Galón</label>
+                            </div>
+                            <div>
+                                <input class="form-control quantity" type="number" min="0" max="999" id="natilla100gsal" name="natilla100gsal" value="0">
+                                <label for="natilla100gsal">Natilla 100g con sal</label>
+                            </div>
+                            <div>
+                                <input class="form-control quantity" type="number" min="0" max="999" id="natilla100gnosal" name="natilla100gnosal" value="0">
+                                <label for="natilla100gnosal">Natilla 100g sin sal</label>
                             </div><br>
                             <div>
                                 <input class="form-control quantity" type="number" min="0" max="999" id="aderezo_PCA" name="aderezo_PCA" value="0">

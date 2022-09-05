@@ -1,6 +1,6 @@
 <?php  
 
-    
+    /*
 $servername = "testmysqlpedidosray.mysql.database.azure.com";
 $username = "pedidosray";
 $password = ".,05zaxscdvf";
@@ -18,6 +18,7 @@ $dbname = "id16779907_db2";
         echo $conn->query($sql33)->num_rows;
     }
     */
+    /*
     $insertCliente = "INSERT INTO `cliente` (`id_cliente`, `nombre`, `completado`) VALUES
     (2, 'Gualberto ', 1),
     (3, 'Mantequilla Santa Ana ', 0),
@@ -876,5 +877,5 @@ $dbname = "id16779907_db2";
         echo "error";
     }
     $conn->close();
-
+*/
 ?>

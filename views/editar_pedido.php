@@ -560,6 +560,10 @@
                                 <label for="queso_crema_caja100">Caja Queso Crema 100g</label>
                             </div>
                             <div>
+                                <input class="form-control quantity" type="number" min="0" max="999" id="quesocremacaja100gblanca" name="quesocremacaja100gblanca" value="<?php if(isset($productos["quesocremacaja100gblanca"])){echo $productos["quesocremacaja100gblanca"];} else {echo "0";} ?>">
+                                <label for="quesocremacaja100gblanca">Queso crema caja 100g blanca</label>
+                            </div>
+                            <div>
                                 <input class="form-control quantity" type="number" min="0" max="999" id="quesocrema_pastelero" name="quesocrema_pastelero" value="<?php if(isset($productos["quesocrema_pastelero"])){echo $productos["quesocrema_pastelero"];} else {echo "0";} ?>">
                                 <label for="quesocrema_pastelero">Queso Crema Kilo Pastelero</label>
                             </div>

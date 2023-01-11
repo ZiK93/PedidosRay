@@ -43,6 +43,10 @@
                             <div>
                                 <input class="form-control quantity" type="number" min="0" max="999" id="semi_mantequilla_nosal" name="semi_mantequilla_nosal" value="0">
                                 <label for="semi_mantequilla_nosal">Mantequilla 1KG</label>
+                            </div>
+                            <div>
+                                <input class="form-control quantity" type="number" min="0" max="999" id="mantequilla1kgconsal" name="mantequilla1kgconsal" value="0">
+                                <label for="mantequilla1kgconsal">Mantequilla de 1KG con sal</label>
                             </div><br>
                             <div>
                                 <input class="form-control quantity" type="number" min="0" max="999" id="semiduro_especial" name="semiduro_especial" value="0">

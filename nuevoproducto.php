@@ -12,7 +12,7 @@ if ($conn->connect_error) {
 
 $insertProducto = "INSERT INTO `producto` (`slug`, `nombre`) VALUES 
 /*('natilla100gsal', 'Natilla 100g con sal'),*/
-('quesocremacaja100gblanca', 'Queso crema caja 100g blanca')";
+('mantequilla1kgconsal', 'Mantequilla de 1KG con sal')";
 if ($conn->query($insertProducto)) {
     echo "<br> success insertProducto <br>";
 } else {

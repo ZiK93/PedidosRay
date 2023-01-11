@@ -43,6 +43,10 @@
                             <div>
                                 <input class="form-control quantity" type="number" min="0" max="999" id="semi_mantequilla_nosal" name="semi_mantequilla_nosal" value="<?php if(isset($productos["semi_mantequilla_nosal"])){echo $productos["semi_mantequilla_nosal"];} else {echo "0";} ?>">
                                 <label for="semi_mantequilla_nosal">Mantequilla 1KG</label>
+                            </div>
+                            <div>
+                                <input class="form-control quantity" type="number" min="0" max="999" id="mantequilla1kgconsal" name="mantequilla1kgconsal" value="<?php if(isset($productos["mantequilla1kgconsal"])){echo $productos["mantequilla1kgconsal"];} else {echo "0";} ?>">
+                                <label for="mantequilla1kgconsal">Mantequilla de 1KG con sal</label>
                             </div><br>
                             <div>
                                 <input class="form-control quantity" type="number" min="0" max="999" id="semiduro_especial" name="semiduro_especial" value="<?php if(isset($productos["semiduro_especial"])){echo $productos["semiduro_especial"];} else {echo "0";} ?>">

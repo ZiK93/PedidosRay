@@ -14,7 +14,7 @@ $insertProducto = "INSERT INTO `producto` (`slug`, `nombre`) VALUES
 /*('natilla100gsal', 'Natilla 100g con sal'),*/
 ('especialrallado2k', 'Especial rallado 2 kilos'),('natillagalonconsal', 'Natilla Galon con sal')";
 if ($conn->query($insertProducto)) {
-    echo "<br> success insertProducto <br>";
+    echo "<br> success insertProducto 6 febrero <br>";
 } else {
     echo "error";
 }

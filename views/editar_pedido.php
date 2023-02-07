@@ -209,6 +209,10 @@
                                 <label for="mozarella_250g_block">Queso Mozarella 250g block</label>
                             </div>
                             <div>
+                                <input class="form-control quantity" type="number" min="0" max="999" id="especialrallado2k" name="especialrallado2k" value="<?php if(isset($productos["especialrallado2k"])){echo $productos["especialrallado2k"];} else {echo "0";} ?>">
+                                <label for="especialrallado2k">Especial rallado 2 kilos</label>
+                            </div>
+                            <div>
                                 <input class="form-control quantity" type="number" min="0" max="999" id="especial_rallada_2da" name="especial_rallada_2da" value="<?php if(isset($productos["especial_rallada_2da"])){echo $productos["especial_rallada_2da"];} else {echo "0";} ?>">
                                 <label for="especial_rallada_2da">Especial Rallada de 2da</label>
                             </div>
@@ -299,6 +303,10 @@
                             <div>
                                 <input class="form-control quantity" type="number" min="0" max="999" id="natilla100gsal" name="natilla100gsal" value="<?php if(isset($productos["natilla100gsal"])){echo $productos["natilla100gsal"];} else {echo "0";} ?>">
                                 <label for="natilla100gsal">Natilla 100g con sal</label>
+                            </div>
+                            <div>
+                                <input class="form-control quantity" type="number" min="0" max="999" id="natillagalonconsal" name="natillagalonconsal" value="<?php if(isset($productos["natillagalonconsal"])){echo $productos["natillagalonconsal"];} else {echo "0";} ?>">
+                                <label for="natillagalonconsal">Natilla Galon con sal</label>
                             </div>
                             <div>
                                 <input class="form-control quantity" type="number" min="0" max="999" id="natilla100gnosal" name="natilla100gnosal" value="<?php if(isset($productos["natilla100gnosal"])){echo $productos["natilla100gnosal"];} else {echo "0";} ?>">

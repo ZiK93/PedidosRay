@@ -204,10 +204,13 @@
                                 <input class="form-control quantity" type="number" min="0" max="999" id="especial_rallada_1y5kg" name="especial_rallada_1y5kg" value="0">
                                 <label for="especial_rallada_1y5kg">Especial Rallada 1.5KG</label>
                             </div>
-                            
                             <div>
                                 <input class="form-control quantity" type="number" min="0" max="999" id="mozarella_250g_block" name="mozarella_250g_block" value="0">
                                 <label for="mozarella_250g_block">Queso Mozarella 250g block</label>
+                            </div>
+                            <div>
+                                <input class="form-control quantity" type="number" min="0" max="999" id="especialrallado2k" name="especialrallado2k" value="0">
+                                <label for="especialrallado2k">Especial rallado 2 kilos</label>
                             </div>
                             <div>
                                 <input class="form-control quantity" type="number" min="0" max="999" id="especial_rallada_2da" name="especial_rallada_2da" value="0">
@@ -301,6 +304,10 @@
                             <div>
                                 <input class="form-control quantity" type="number" min="0" max="999" id="natilla100gsal" name="natilla100gsal" value="0">
                                 <label for="natilla100gsal">Natilla 100g con sal</label>
+                            </div>
+                            <div>
+                                <input class="form-control quantity" type="number" min="0" max="999" id="natillagalonconsal" name="natillagalonconsal" value="0">
+                                <label for="natillagalonconsal">Natilla Galon con sal</label>
                             </div>
                             <div>
                                 <input class="form-control quantity" type="number" min="0" max="999" id="natilla100gnosal" name="natilla100gnosal" value="0">

@@ -537,6 +537,10 @@
                                 <label for="palmito_pelota">Palmito 400g al vacío</label>
                             </div>
                             <div>
+                                <input class="form-control quantity" type="number" min="0" max="999" id="palmitobolsa400g" name="palmitobolsa400g" value="0">
+                                <label for="palmitobolsa400g">Palmito en bolsa 400g</label>
+                            </div>
+                            <div>
                                 <input class="form-control quantity" type="number" min="0" max="999" id="palmito_romero_300g" name="palmito_romero_300g" value="0">
                                 <label for="palmito_romero_300g">Queso Palmito romero 300g</label>
                             </div>

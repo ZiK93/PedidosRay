@@ -11,10 +11,10 @@ if ($conn->connect_error) {
 }
 
 $insertProducto = "INSERT INTO `producto` (`slug`, `nombre`) VALUES 
-/*('natilla100gsal', 'Natilla 100g con sal'),*/
-('especialrallado2k', 'Especial rallado 2 kilos'),('natillagalonconsal', 'Natilla Galon con sal')";
+('palmitobolsa400g', 'Palmito en bolsa 400g');
+/*('especialrallado2k', 'Especial rallado 2 kilos'),('natillagalonconsal', 'Natilla Galon con sal')";*/
 if ($conn->query($insertProducto)) {
-    echo "<br> success insertProducto 6 febrero <br>";
+    echo "<br> success insertProducto 28 marzo <br>";
 } else {
     echo "error";
 }

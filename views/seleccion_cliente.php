@@ -209,6 +209,10 @@
                                 <label for="mozarella_250g_block">Queso Mozarella 250g block</label>
                             </div>
                             <div>
+                                <input class="form-control quantity" type="number" min="0" max="999" id="especial_block_de_1kg" name="especial_block_de_1kg" value="0">
+                                <label for="especial_block_de_1kg">Especial block de 1KG</label>
+                            </div>
+                            <div>
                                 <input class="form-control quantity" type="number" min="0" max="999" id="especialrallado2k" name="especialrallado2k" value="0">
                                 <label for="especialrallado2k">Especial rallado 2 kilos</label>
                             </div>

@@ -209,6 +209,10 @@
                                 <label for="mozarella_250g_block">Queso Mozarella 250g block</label>
                             </div>
                             <div>
+                                <input class="form-control quantity" type="number" min="0" max="999" id="especial_block_de_1kg" name="especial_block_de_1kg" value="<?php if(isset($productos["especial_block_de_1kg"])){echo $productos["especial_block_de_1kg"];} else {echo "0";} ?>">
+                                <label for="especial_block_de_1kg">Especial block de 1KG</label>
+                            </div>
+                            <div>
                                 <input class="form-control quantity" type="number" min="0" max="999" id="especialrallado2k" name="especialrallado2k" value="<?php if(isset($productos["especialrallado2k"])){echo $productos["especialrallado2k"];} else {echo "0";} ?>">
                                 <label for="especialrallado2k">Especial rallado 2 kilos</label>
                             </div>

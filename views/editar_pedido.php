@@ -652,16 +652,12 @@
                                 <label for="pmmoravia">Peq. Mundo Moravia</label>
                             </div>
                             <div>
-                                <input class="form-control quantity" type="number" min="0" max="999" id="pmygriega" name="pmygriega" value="<?php if(isset($productos["pmygriega"])){echo $productos["pmygriega"];} else {echo "0";} ?>">
-                                <label for="pmygriega">Peq. Mundo Y griega</label>
-                            </div>
-                            <div>
-                                <input class="form-control quantity" type="number" min="0" max="999" id="pmguachipelin" name="pmguachipelin" value="<?php if(isset($productos["pmguachipelin"])){echo $productos["pmguachipelin"];} else {echo "0";} ?>">
-                                <label for="pmguachipelin">Peq. Mundo Guachipelin</label>
-                            </div>
-                            <div>
                                 <input class="form-control quantity" type="number" min="0" max="999" id="pmtrestios" name="pmtrestios" value="<?php if(isset($productos["pmtrestios"])){echo $productos["pmtrestios"];} else {echo "0";} ?>">
                                 <label for="pmtrestios">Peq. Mundo Tres Rios</label>
+                            </div>
+                            <div>
+                                <input class="form-control quantity" type="number" min="0" max="999" id="pmalajuelita" name="pmalajuelita" value="<?php if(isset($productos["pmalajuelita"])){echo $productos["pmalajuelita"];} else {echo "0";} ?>">
+                                <label for="pmalajuelita">Peq. Mundo Alajuelita</label>
                             </div><br>
                             <div>
                                 <input class="form-control quantity" type="number" min="0" max="999" id="rompope920" name="rompope920" value="<?php if(isset($productos["rompope920"])){echo $productos["rompope920"];} else {echo "0";} ?>">

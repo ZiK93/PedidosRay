@@ -657,7 +657,7 @@
                                 <label for="pmtrestios">Peq. Mundo Tres Rios</label>
                             </div>
                             <div>
-                                <input class="form-control quantity" type="number" min="0" max="999" id="pmygriega" name="pmygriega" value="0">
+                                <input class="form-control quantity" type="number" min="0" max="999" id="pmalajuelita" name="pmalajuelita" value="0">
                                 <label for="pmalajuelita">Peq. Mundo Alajuelita</label>
                             </div><br>
                             <div>

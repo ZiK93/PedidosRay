@@ -653,16 +653,12 @@
                                 <label for="pmmoravia">Peq. Mundo Moravia</label>
                             </div>
                             <div>
-                                <input class="form-control quantity" type="number" min="0" max="999" id="pmygriega" name="pmygriega" value="0">
-                                <label for="pmygriega">Peq. Mundo Y griega</label>
-                            </div>
-                            <div>
-                                <input class="form-control quantity" type="number" min="0" max="999" id="pmguachipelin" name="pmguachipelin" value="0">
-                                <label for="pmguachipelin">Peq. Mundo Guachipelin</label>
-                            </div>
-                            <div>
                                 <input class="form-control quantity" type="number" min="0" max="999" id="pmtrestios" name="pmtrestios" value="0">
                                 <label for="pmtrestios">Peq. Mundo Tres Rios</label>
+                            </div>
+                            <div>
+                                <input class="form-control quantity" type="number" min="0" max="999" id="pmygriega" name="pmygriega" value="0">
+                                <label for="pmalajuelita">Peq. Mundo Alajuelita</label>
                             </div><br>
                             <div>
                                 <input class="form-control quantity" type="number" min="0" max="999" id="rompope920" name="rompope920" value="0">

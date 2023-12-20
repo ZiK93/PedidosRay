@@ -85,6 +85,14 @@
                                 <label for="semiduro_500g_vacio">Queso Semiduro 500g vacio</label>
                             </div><br>
                             <div>
+                                <input class="form-control quantity" type="number" min="0" max="999" id="pososo_blanco_500g" name="pososo_blanco_500g" value="<?php if(isset($productos["pososo_blanco_500g"])){echo $productos["pososo_blanco_500g"];} else {echo "0";} ?>">
+                                <label for="pososo_blanco_500g">Pososo Blanco 500g</label>
+                            </div>
+                            <div>
+                                <input class="form-control quantity" type="number" min="0" max="999" id="pososo_blanco_1kg" name="pososo_blanco_1kg" value="<?php if(isset($productos["pososo_blanco_1kg"])){echo $productos["pososo_blanco_1kg"];} else {echo "0";} ?>">
+                                <label for="pososo_blanco_1kg">Pososo Blanco 1KG</label>
+                            </div>
+                            <div>
                                 <input class="form-control quantity" type="number" min="0" max="999" id="semiduro_huecos_1KG" name="semiduro_huecos_1KG" value="<?php if(isset($productos["semiduro_huecos_1KG"])){echo $productos["semiduro_huecos_1KG"];} else {echo "0";} ?>">
                                 <label for="semiduro_huecos_1KG">Queso semiduro con huecos 1KG</label>
                             </div>

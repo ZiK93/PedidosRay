@@ -638,6 +638,10 @@
                             <div>
                                 <input class="form-control quantity" type="number" min="0" max="999" id="gualberto500" name="gualberto500" value="<?php if(isset($productos["gualberto500"])){echo $productos["gualberto500"];} else {echo "0";} ?>">
                                 <label for="gualberto500">Natilla Gualberto 500g</label>
+                            </div>
+                            <div>
+                                <input class="form-control quantity" type="number" min="0" max="999" id="quesocrema1kggualberto" name="quesocrema1kggualberto" value="<?php if(isset($productos["quesocrema1kggualberto"])){echo $productos["quesocrema1kggualberto"];} else {echo "0";} ?>">
+                                <label for="quesocrema1kggualberto">Queso Crema 1KG Blanco Gualberto</label>
                             </div><br>
                             <div>
                                 <input class="form-control quantity" type="number" min="0" max="999" id="cheddar200" name="cheddar200" value="<?php if(isset($productos["cheddar200"])){echo $productos["cheddar200"];} else {echo "0";} ?>">

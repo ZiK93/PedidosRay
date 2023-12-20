@@ -639,6 +639,10 @@
                             <div>
                                 <input class="form-control quantity" type="number" min="0" max="999" id="gualberto500" name="gualberto500" value="0">
                                 <label for="gualberto500">Natilla Gualberto 500g</label>
+                            </div>
+                            <div>
+                                <input class="form-control quantity" type="number" min="0" max="999" id="quesocrema1kggualberto" name="quesocrema1kggualberto" value="0">
+                                <label for="quesocrema1kggualberto">Queso Crema 1KG Blanco Gualberto</label>
                             </div><br>
                             <div>
                                 <input class="form-control quantity" type="number" min="0" max="999" id="cheddar200" name="cheddar200" value="0">

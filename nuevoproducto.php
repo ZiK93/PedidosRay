@@ -10,9 +10,9 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
-$insertProducto = "INSERT INTO `producto` (`slug`, `nombre`) VALUES ('quesocrema1kggualberto', 'Queso Crema 1KG Blanco Gualberto')";
+$insertProducto = "INSERT INTO `producto` (`slug`, `nombre`) VALUES ('quesocrema30610', 'Queso Crema Blanco 1kg (30610)')";
 if ($conn->query($insertProducto)) {
-    echo "<br> success insertProducto 20 diciembre - quesocrema1kggualberto<br>";
+    echo "<br> success insertProducto 12 febrero diciembre - quesocrema30610<br>";
 } else {
     echo "error";
 }

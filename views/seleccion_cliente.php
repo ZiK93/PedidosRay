@@ -619,6 +619,10 @@
                             <div>
                                 <input class="form-control quantity" type="number" min="0" max="999" id="caja_250g" name="caja_250g" value="0">
                                 <label for="caja_250g">Queso Crema Caja de 250g</label>
+                            </div>
+                            <div>
+                                <input class="form-control quantity" type="number" min="0" max="999" id="quesocrema30610" name="quesocrema30610" value="0">
+                                <label for="quesocrema30610">Queso Crema Blanco 1kg (30610)</label>
                             </div><br>
                             <div>
                                 <input class="form-control quantity" type="number" min="0" max="999" id="jugonaranja_galon" name="jugonaranja_galon" value="0">

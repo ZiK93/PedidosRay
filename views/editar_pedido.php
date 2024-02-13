@@ -618,6 +618,10 @@
                             <div>
                                 <input class="form-control quantity" type="number" min="0" max="999" id="caja_250g" name="caja_250g" value="<?php if(isset($productos["caja_250g"])){echo $productos["caja_250g"];} else {echo "0";} ?>">
                                 <label for="caja_250g">Queso Crema Caja de 250g</label>
+                            </div>
+                            <div>
+                                <input class="form-control quantity" type="number" min="0" max="999" id="quesocrema30610" name="quesocrema30610" value="<?php if(isset($productos["quesocrema30610"])){echo $productos["quesocrema30610"];} else {echo "0";} ?>">
+                                <label for="quesocrema30610">Queso Crema Blanco 1kg (30610)</label>
                             </div><br>
                             <div>
                                 <input class="form-control quantity" type="number" min="0" max="999" id="jugonaranja_galon" name="jugonaranja_galon" value="<?php if(isset($productos["jugonaranja_galon"])){echo $productos["jugonaranja_galon"];} else {echo "0";} ?>">

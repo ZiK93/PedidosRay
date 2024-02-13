@@ -683,6 +683,18 @@
                             <div>
                                 <input class="form-control quantity" type="number" min="0" max="999" id="rompope210" name="rompope210" value="0">
                                 <label for="rompope210">Rompope 210g</label>
+                            </div><br>
+                            <div>
+                                <input class="form-control quantity" type="number" min="0" max="999" id="choppers_esp" name="choppers_esp" value="0">
+                                <label for="choppers_esp">CHOPPERS</label>
+                            </div>
+                            <div>
+                                <input class="form-control quantity" type="number" min="0" max="999" id="crujipan_esp" name="crujipan_esp" value="0">
+                                <label for="crujipan_esp">Crujipan</label>
+                            </div>
+                            <div>
+                                <input class="form-control quantity" type="number" min="0" max="999" id="pmundo_cartago_esp" name="pmundo_cartago_esp" value="0">
+                                <label for="pmundo_cartago_esp">Pequeño mundo cartago</label>
                             </div>
                             <div>
                                 <input class="form-control quantity" style="visibility:hidden;" type="number" id="data_id_cliente" name="data_id_cliente" value="<?php echo $datos_cliente["id_cliente"]; ?>">

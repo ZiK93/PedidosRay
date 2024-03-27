@@ -1,5 +1,5 @@
 <?php  
-
+phpinfo();
     /*
 $servername = "testmysqlpedidosray.mysql.database.azure.com";
 $username = "pedidosray";

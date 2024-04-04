@@ -1,21 +1,18 @@
 <?php 
-
+    session_start();
+    $usuario = $_SESSION["user"];
 	$nombre_cliente = $_POST['nombre_cliente'];
-	
-    $servername = "testmysqlpedidosray.mysql.database.azure.com";
-    $username = "pedidosray";
-    $password = ".,05zaxscdvf";
-    $dbname = "id16779907_db2";
 
+    require_once("../config.php");
     // Create connection
-    $conn = new mysqli($servername, $username, $password, $dbname);
+    $conn = connect_to_database();
         $acentos = $conn->query("SET NAMES 'utf8'");
     // Check connection
     if ($conn->connect_error) {
         die("Connection failed: " . $conn->connect_error);
     }
     
-    $sql = 'INSERT INTO cliente (nombre) VALUES ("'.$nombre_cliente.'")';
+    $sql = 'INSERT INTO cliente (nombre,usuario) VALUES ("'.$nombre_cliente.'","'.$usuario.'")';
     if ($conn->query($sql) === TRUE) {
         echo "true";
     } else {

@@ -106,7 +106,7 @@
             die("Connection failed: " . $conn->connect_error);
         }
         
-        if ($result = $conn -> query('SELECT * FROM producto WHERE columna = '.$columna.' AND usuario = "'.$usuario.'"')) {
+        if ($result = $conn -> query('SELECT * FROM producto WHERE columna = '.$columna.' AND usuario = "'.$usuario.'" ORDER BY pos ASC')) {
             while($obj = $result->fetch_object()){
                 if($obj->slug != "xxxxx"){
                     if(isset($productos[$obj->slug])){

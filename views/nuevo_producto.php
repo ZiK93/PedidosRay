@@ -21,7 +21,7 @@
                 
             </div>
             <div  class="container"><a href="../inicio.php" class="btn btn-primary d-flex justify-content-center">Volver</a></div>
-            <div class="container">
+            <div class="prods_edit">
                     <div class="row tablaProductos">
                         <div class="col-sm bordeColumnas">
                             
@@ -114,14 +114,29 @@
             if ($result = $conn -> query('SELECT * FROM producto WHERE columna = "'.$columna.'" AND usuario = "'.$usuario.'" ORDER BY pos ASC')) {
                 while($obj = $result->fetch_object()){
                     if($obj->slug != "xxxxx"){
-                        echo '<div><input class="form-control quantity listprdsbox" type="text" id="'.$obj->slug.'" name="'.$obj->slug.'" value="'.$obj->pos.'">
-                        <label class="listprds" for="'.$obj->slug.'">'.$obj->nombre.'</label>
-                        <button class="btn btn-danger" id="btneliminarproducto" onclick="eliminarProducto(`'.$obj->slug.'`)">Eliminar</button></div>
+                        echo '<div class="row">
+                            <div class="col nopadding" onclick="mostrar_edicion(`'.$obj->id_producto.'`)">
+                                <input class="form-control quantity listprdsbox" type="text" id="id_prod_'.$obj->id_producto.'" name="'.$obj->slug.'" value="'.$obj->pos.'" >
+                                <label class="listprds" for="'.$obj->slug.'">'.$obj->nombre.'</label>
+                            </div>
+                                
+                            <div class="col-md-auto nopadding" id="div_'.$obj->id_producto.'" style="display: none;">
+                                <button class="btn btn-danger btnelminarprd" id="btneliminarproducto" onclick="eliminarProducto('.$obj->id_producto.', '.$obj->pos.', '.$columna.')">Eliminar</button>
+                                <button class="btn btn-warning btnelminarprd" id="btneliminarproducto" onclick="editar_pos_producto('.$columna.', '.$obj->id_producto.')">Editar</button>
+                            </div>
+                        </div>
                         ';
                     } else {
-                        echo '<div><input class="form-control quantity listprdsbox" type="text" id="'.$obj->slug.'" name="'.$obj->slug.'" value="'.$obj->pos.'">
-                        <label class="listprds" for="'.$obj->slug.'">-----Espaciador------</label>
-                        <button class="btn btn-danger" id="btneliminarproducto" onclick="eliminarProducto(`'.$obj->slug.'`)">Eliminar</button></div>';
+                        echo '<div class="row">
+                            <div class="col nopadding" onclick="mostrar_edicion(`'.$obj->id_producto.'`)">
+                                <input class="form-control quantity listprdsbox" type="text" id="id_prod_'.$obj->id_producto.'" name="'.$obj->slug.'" value="'.$obj->pos.'" >
+                                <label class="listprds" for="'.$obj->slug.'">-----Espaciador------</label>
+                            </div>
+                            <div class="col-md-auto nopadding" id="div_'.$obj->id_producto.'" style="display: none;">
+                                <button class="btn btn-danger btnelminarprd" id="btneliminarproducto" onclick="eliminarProducto('.$obj->id_producto.', '.$obj->pos.', '.$columna.')">Eliminar</button>
+                                <button class="btn btn-warning btnelminarprd" id="btneliminarproducto" onclick="editar_pos_producto('.$columna.', '.$obj->id_producto.')">Editar</button>
+                            </div>
+                        </div>';
                     }
                     
                 }

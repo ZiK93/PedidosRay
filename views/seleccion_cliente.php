@@ -22,6 +22,7 @@
             <div class="d-flex justify-content-center header">
                 <h2><?php echo $datos_cliente["nombre"]; ?></h2>
             </div>
+            <div  class="container"><a href="../inicio.php" class="btn btn-primary d-flex justify-content-center">Volver</a></div>
             <form action="/controller/procesar_pedido.php" method="post" id="products_list">
                 <div class="container">
                     <div class="row tablaProductos">
@@ -101,13 +102,17 @@
         if ($result = $conn -> query('SELECT * FROM producto WHERE columna = '.$columna.' AND usuario = "'.$usuario.'"')) {
 
             while($obj = $result->fetch_object()){
-
-                echo '
-                <div>
-                    <input class="form-control quantity" type="number" min="0" max="999" id="'.$obj->slug.'" name="'.$obj->slug.'" value="0">
-                    <label for="'.$obj->slug.'">'.$obj->nombre.'</label>
-                </div>
-                ';
+                if($obj->slug != "xxxxx"){
+                    echo '
+                    <div>
+                        <input class="form-control quantity" type="number" min="0" max="999" id="'.$obj->slug.'" name="'.$obj->slug.'" value="0">
+                        <label for="'.$obj->slug.'">'.$obj->nombre.'</label>
+                    </div>
+                    ';
+                } else {
+                    echo '<br>';
+                }
+                
             }
         } 
     }

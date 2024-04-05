@@ -5,10 +5,10 @@
     display: inline-block;
 }
 .btn-cliente{
-    margin-left: 40px;
+    margin-left: 40px !important;
 }
 .btn-historial{
-    margin-left: 40px;
+    margin-left: 40px !important;
 }
 .nCliente{
     width: 280px;
@@ -93,6 +93,21 @@
 }
 .btnagregarnuevo{
     padding: 0px !important;
+}
+.nopadding{
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+}
+.btnelminarprd{
+    margin-right: 10px !important;
+
+}
+.row {
+    margin-right: 0px !important;
+}
+.prods_edit{
+    margin-left: 7%;
+    margin-right: 7%;
 }
 
 @media screen and (max-width: 500px) {

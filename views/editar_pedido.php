@@ -23,6 +23,7 @@
             <div class="d-flex justify-content-center header">
                 <h2>Editando pedido de <?php echo $datos_cliente["nombre"]; ?></h2>
             </div>
+            <div  class="container"><a href="../inicio.php" class="btn btn-primary d-flex justify-content-center">Volver</a></div>
             <form action="/controller/procesar_pedido_editado.php" method="post" id="products_list">
                 <div class="container">
                     <div class="row tablaProductos">
@@ -59,6 +60,7 @@
                         url: frm.attr('action'),
                         data: frm.serialize(),
                         success: function (data) {
+                            console.log(data);
                             if(data == 1){
                                 alert('Pedido editado correctamente.');
                                 window.location.replace("../inicio.php");
@@ -68,7 +70,10 @@
                             } else if(data == 99) {
                                 alert('Se ha eliminado el pedido');
                                 window.location.replace("../inicio.php");
-                            }  
+                            }  else if(data == 1234) {
+                                alert('asdasddas');
+                                window.location.replace("../inicio.php");
+                            }
                         },
                         error: function (data) {
                             console.log('An error occurred.');
@@ -103,23 +108,28 @@
         
         if ($result = $conn -> query('SELECT * FROM producto WHERE columna = '.$columna.' AND usuario = "'.$usuario.'"')) {
             while($obj = $result->fetch_object()){
-                if(isset($productos[$obj->slug])){
-                    echo '
-                    <div>
-                        <input class="form-control quantity" type="number" min="0" max="999" id="'.$obj->slug.'" name="'.$obj->slug.'" value="'.$productos[$obj->slug].'">
-                        <label for="'.$obj->slug.'">'.$obj->nombre.'</label>
-                    </div>
-                    ';
-                    ;
+                if($obj->slug != "xxxxx"){
+                    if(isset($productos[$obj->slug])){
+                        echo '
+                        <div>
+                            <input class="form-control quantity" type="number" min="0" max="999" id="'.$obj->slug.'" name="'.$obj->slug.'" value="'.$productos[$obj->slug].'">
+                            <label for="'.$obj->slug.'">'.$obj->nombre.'</label>
+                        </div>
+                        ';
+                        ;
+                    } else {
+                        echo '
+                        <div>
+                            <input class="form-control quantity" type="number" min="0" max="999" id="'.$obj->slug.'" name="'.$obj->slug.'" value="0">
+                            <label for="'.$obj->slug.'">'.$obj->nombre.'</label>
+                        </div>
+                        ';
+                    
+                    }
                 } else {
-                    echo '
-                    <div>
-                        <input class="form-control quantity" type="number" min="0" max="999" id="'.$obj->slug.'" name="'.$obj->slug.'" value="0">
-                        <label for="'.$obj->slug.'">'.$obj->nombre.'</label>
-                    </div>
-                    ';
-                
+                    echo '<br>';
                 }
+                
             }
         }
         $conn->close();
@@ -167,24 +177,22 @@
             if ($conn->connect_error) {
                 die("Connection failed: " . $conn->connect_error);
             }
-            
             if ($result = $conn -> query('SELECT id_pedido FROM pedido WHERE fk_cliente = '.$id_cliente.' AND fecha = "'.getActualDate().'" AND usuario = "'.$usuario.'"')) {
                 while($obj = $result->fetch_object()){
                     $id_pedido = $obj->id_pedido;
                 }
-            } 
-
-            if ($result2 = $conn -> query('SELECT slug_producto, cantidad FROM detalle WHERE fk_pedido = '.$id_pedido.' AND usuario = "'.$usuario.'"')) {
-                while($obj = $result2->fetch_object()){
-                    $ProductosPedido[$obj->slug_producto] = $obj->cantidad;
-                }
+                if ($result2 = $conn -> query('SELECT slug_producto, cantidad FROM detalle WHERE fk_pedido = '.$id_pedido.' AND usuario = "'.$usuario.'"')) {
+                    while($obj = $result2->fetch_object()){
+                        $ProductosPedido[$obj->slug_producto] = $obj->cantidad;
+                    }
+                } 
             } 
 
             $ProductosPedido["id_pedido"] = $id_pedido;
 
             $conn->close();
 
-            return $ProductosPedido;            
+            return $ProductosPedido;     
         }
         else {
             return "Sin cliente seleccionado";

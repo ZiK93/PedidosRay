@@ -34,22 +34,36 @@
                     if($obj1->pos == $newpos){
                         $flag = "false";
                     } else {
-                        if ($result2 = $conn -> query('SELECT id_producto,slug,pos FROM producto WHERE pos >= '.$newpos.' AND columna = "'.$columna.'" AND usuario = "'.$usuario.'" ORDER by pos ASC')) {
-                            while($obj2 = $result2->fetch_object()){
-                                $nextpos = $obj2->pos + 1;
-                                $sql1 = 'UPDATE producto SET pos = '.$nextpos.' WHERE id_producto = "'.$obj2->id_producto.'" AND usuario = "'.$usuario.'"';
-                                $conn->query($sql1);
+                        if($obj1->pos > $newpos){
+                            if ($result2 = $conn -> query('SELECT id_producto,slug,pos FROM producto WHERE pos >= '.$newpos.' AND columna = "'.$columna.'" AND usuario = "'.$usuario.'" ORDER by pos ASC')) {
+                                while($obj2 = $result2->fetch_object()){
+                                    $nextpos = $obj2->pos + 1;
+                                    $sql1 = 'UPDATE producto SET pos = '.$nextpos.' WHERE id_producto = "'.$obj2->id_producto.'" AND usuario = "'.$usuario.'"';
+                                    $conn->query($sql1);
+                                }
+                            } 
+                            $sql2 = 'UPDATE producto SET pos = '.$newpos.' WHERE id_producto = "'.$id_producto.'" AND usuario = "'.$usuario.'"';
+                            if ($conn->query($sql2) === TRUE) {
+                                $flag = "true";
                             }
-                        } 
+                        } else if($obj1->pos < $newpos){
+                            if ($result2 = $conn -> query('SELECT id_producto,slug,pos FROM producto WHERE pos > '.$obj1->pos.' AND pos < '.$newpos.' AND columna = "'.$columna.'" AND usuario = "'.$usuario.'" ORDER by pos ASC')) {
+                                while($obj2 = $result2->fetch_object()){
+                                    $nextpos = $obj2->pos - 1;
+                                    $sql1 = 'UPDATE producto SET pos = '.$nextpos.' WHERE id_producto = "'.$obj2->id_producto.'" AND usuario = "'.$usuario.'"';
+                                    $conn->query($sql1);
+                                }
+                            } 
+                            $newpos = $newpos - 1;
+                            $sql2 = 'UPDATE producto SET pos = '.$newpos.' WHERE id_producto = "'.$id_producto.'" AND usuario = "'.$usuario.'"';
+                            if ($conn->query($sql2) === TRUE) {
+                                $flag = "true";
+                            }
+                        }           
                     }
                 }
             } 
 
-
-            $sql2 = 'UPDATE producto SET pos = '.$newpos.' WHERE id_producto = "'.$id_producto.'" AND usuario = "'.$usuario.'"';
-            if ($conn->query($sql2) === TRUE) {
-                $flag = "true";
-            }
     
               
             $conn->close();

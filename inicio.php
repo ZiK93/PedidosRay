@@ -83,7 +83,7 @@
                         </div>
                     </div>
                 </div>
-                <form action="/controller/clear_cache.php" class="inline">
+                <form action="/controller/clear_cache.php" style="margin-bottom: 0px !important;" class="inline">
                     <button type="button submit-button" class="btn btn-secondary btn-salir" >Salir</button>
                 </form>
                 

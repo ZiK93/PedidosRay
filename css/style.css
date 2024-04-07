@@ -109,6 +109,9 @@
     margin-left: 7%;
     margin-right: 7%;
 }
+.btn-salir{
+    margin-left: 80px !important;
+}
 
 @media screen and (max-width: 500px) {
     .tablaProductos{

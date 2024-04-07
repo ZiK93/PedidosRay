@@ -29,19 +29,20 @@
                 die("Connection failed: " . $conn->connect_error);
             }
 
-           // if ($result1 = $conn -> query('SELECT MAX(pos) as pos FROM producto WHERE columna = "'.$columna.'" AND usuario = "'.$usuario.'"')) {
-            //    while($obj1 = $result1->fetch_object()){
-             //       if($obj1->pos < $newpos){
-                        if ($result1 = $conn -> query('SELECT id_producto,slug,pos FROM producto WHERE id_producto = "'.$id_producto.'" AND usuario = "'.$usuario.'"')) {
-                            while($obj1 = $result1->fetch_object()){
-                                if($obj1->pos == $newpos){
+            if ($result1 = $conn -> query('SELECT MAX(pos) as maxposquery FROM producto WHERE columna = "'.$columna.'" AND usuario = "'.$usuario.'"')) {
+                while($obj1 = $result1->fetch_object()){
+                    $maxpos = $obj1->maxposquery;
+                    if($newpos <= $maxpos){
+                        if ($result2general = $conn -> query('SELECT id_producto,slug,pos FROM producto WHERE id_producto = "'.$id_producto.'" AND usuario = "'.$usuario.'"')) {
+                            while($obj2general = $result2general->fetch_object()){
+                                if($obj2general->pos == $newpos){
                                     $flag = "false";
                                 } else {
-                                    if($obj1->pos > $newpos){
-                                        if ($result2 = $conn -> query('SELECT id_producto,slug,pos FROM producto WHERE pos >= '.$newpos.' AND columna = "'.$columna.'" AND usuario = "'.$usuario.'" ORDER by pos ASC')) {
+                                    if($obj2general->pos > $newpos){ //subiendo producto
+                                        if ($result2 = $conn -> query('SELECT id_producto,slug,pos FROM producto WHERE pos >= '.$newpos.' AND pos < '.$obj2general->pos.' AND columna = "'.$columna.'" AND usuario = "'.$usuario.'" ORDER by pos ASC')) {
                                             while($obj2 = $result2->fetch_object()){
-                                                $nextpos = $obj2->pos + 1;
-                                                $sql1 = 'UPDATE producto SET pos = '.$nextpos.' WHERE id_producto = "'.$obj2->id_producto.'" AND usuario = "'.$usuario.'"';
+                                                $nextposprods = $obj2->pos + 1;
+                                                $sql1 = 'UPDATE producto SET pos = '.$nextposprods.' WHERE id_producto = "'.$obj2->id_producto.'" AND usuario = "'.$usuario.'"';
                                                 $conn->query($sql1);
                                             }
                                         } 
@@ -49,11 +50,11 @@
                                         if ($conn->query($sql2) === TRUE) {
                                             $flag = "true";
                                         }
-                                    } else if($obj1->pos < $newpos){
-                                        if ($result2 = $conn -> query('SELECT id_producto,slug,pos FROM producto WHERE pos > '.$obj1->pos.' AND pos < '.$newpos.' AND columna = "'.$columna.'" AND usuario = "'.$usuario.'" ORDER by pos ASC')) {
-                                            while($obj2 = $result2->fetch_object()){
-                                                $nextpos = $obj2->pos - 1;
-                                                $sql1 = 'UPDATE producto SET pos = '.$nextpos.' WHERE id_producto = "'.$obj2->id_producto.'" AND usuario = "'.$usuario.'"';
+                                    } else if($obj2general->pos < $newpos){ //bajando producto
+                                        if ($result2 = $conn -> query('SELECT id_producto,slug,pos FROM producto WHERE pos > '.$obj2general->pos.' AND pos < '.$newpos.' AND columna = "'.$columna.'" AND usuario = "'.$usuario.'" ORDER by pos ASC')) {
+                                            while($obj3 = $result2->fetch_object()){
+                                                $nextpos = $obj3->pos - 1;
+                                                $sql1 = 'UPDATE producto SET pos = '.$nextpos.' WHERE id_producto = "'.$obj3->id_producto.'" AND usuario = "'.$usuario.'"';
                                                 $conn->query($sql1);
                                             }
                                         } 
@@ -66,9 +67,9 @@
                                 }
                             }
                         }
-                //    }
-              //  }
-            //}
+                    }
+                }
+            }
              
             $conn->close();
         } else {

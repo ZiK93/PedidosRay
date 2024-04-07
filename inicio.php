@@ -83,6 +83,10 @@
                         </div>
                     </div>
                 </div>
+                <form action="/controller/clear_cache.php" class="inline">
+                    <button type="button submit-button" class="btn btn-secondary btn-salir" >Salir</button>
+                </form>
+                
             </div>
             <div class="d-flex justify-content-center">
                 <h2>Seleccione el cliente</h2>

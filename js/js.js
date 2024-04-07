@@ -250,6 +250,7 @@ function editar_pos_producto(columna, id_producto) {
                     location.reload(); 
                 } else {
                     alert("Error modificando posicion del producto");
+                    location.reload();
                 }
             },
             error: function(xhr, textStatus, error){

@@ -29,9 +29,9 @@
                 die("Connection failed: " . $conn->connect_error);
             }
 
-            if ($result1 = $conn -> query('SELECT MAX(pos) as pos FROM producto WHERE columna = "'.$columna.'" AND usuario = "'.$usuario.'"')) {
-                while($obj1 = $result1->fetch_object()){
-                    if($obj1->pos < $newpos){
+           // if ($result1 = $conn -> query('SELECT MAX(pos) as pos FROM producto WHERE columna = "'.$columna.'" AND usuario = "'.$usuario.'"')) {
+            //    while($obj1 = $result1->fetch_object()){
+             //       if($obj1->pos < $newpos){
                         if ($result1 = $conn -> query('SELECT id_producto,slug,pos FROM producto WHERE id_producto = "'.$id_producto.'" AND usuario = "'.$usuario.'"')) {
                             while($obj1 = $result1->fetch_object()){
                                 if($obj1->pos == $newpos){
@@ -66,9 +66,9 @@
                                 }
                             }
                         }
-                    }
-                }
-            }
+                //    }
+              //  }
+            //}
              
             $conn->close();
         } else {

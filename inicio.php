@@ -588,13 +588,24 @@
 
                 
 
-                if($divs_rows == 3){
-                    $rows .= '</div>';
-                    $fin_3ra_fila = true;
-                    $page += 1;
-                    $divs_rows = 0;
-                } else if($n_pedido == $n_pedidos_totales){
-                    $rows .= '</div>';
+                if($usuario == "Sardina"){
+                    if($divs_rows == 2){
+                        $rows .= '</div>';
+                        $fin_3ra_fila = true;
+                        $page += 1;
+                        $divs_rows = 0;
+                    } else if($n_pedido == $n_pedidos_totales){
+                        $rows .= '</div>';
+                    }
+                } else {
+                    if($divs_rows == 3){
+                        $rows .= '</div>';
+                        $fin_3ra_fila = true;
+                        $page += 1;
+                        $divs_rows = 0;
+                    } else if($n_pedido == $n_pedidos_totales){
+                        $rows .= '</div>';
+                    }
                 }
                 
                 $divs_rows += 1;

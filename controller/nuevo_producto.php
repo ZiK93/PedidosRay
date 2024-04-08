@@ -17,6 +17,7 @@
         
         $slug = str_replace(' ', '_', $nombre_producto);
         $slug = str_replace('.', '_', $slug);
+        $slug = str_replace(',', '_', $slug);
         $slug = strtolower($slug);
     
         $existe = false;

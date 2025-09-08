@@ -18,7 +18,7 @@
         $slug = str_replace(' ', '_', $nombre_producto);
         $slug = str_replace('.', '_', $slug);
         $slug = str_replace(',', '_', $slug);
-        $slug = strtolower($slug);
+        $slug = strtolower($slug).'_'.$usuario;
     
         $existe = false;
         $slug_existe = mysqli_num_rows($conn -> query('SELECT slug FROM producto WHERE slug = "'.$slug.'" AND usuario = "'.$usuario.'"'));

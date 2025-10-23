@@ -2,7 +2,8 @@
     session_start();
 ?>
 <?php if(isset($_SESSION["user"])){
-    $usuario = $_SESSION["user"]; ?>
+    $usuario = $_SESSION["user"];
+    $pago = $_SESSION["pago"]; ?>
 
 
 <html>
@@ -30,6 +31,27 @@
                 }).datepicker('update', new Date()); 
             }); 
         </script> 
+
+        <?php
+            if ($_SESSION["pago"] == 0) { ?>
+                <script>
+                    window.addEventListener('DOMContentLoaded', function () {
+                        setTimeout(function () {
+                        var aviso = document.getElementById('pantallaAviso');
+                        if (aviso) {
+                            aviso.style.display = 'none';
+                        }
+                        }, 8000); // Ocultar después de 5 segundos
+                    });
+                </script>
+                <div id="pantallaAviso">
+                    <div id="contenidoAviso">
+                        ⚠️ Recordatorio de que el pago de la aplicación se encuentra atrasado
+                    </div>
+                </div>
+        <?php  } ?>  
+          
+        
 
 
         <link rel="stylesheet" href="css/style.css">

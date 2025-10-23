@@ -13,11 +13,12 @@
         if ($conn->connect_error) {
             die("Connection failed: " . $conn->connect_error);
         }
-        if ($result = $conn -> query('SELECT usuario FROM usuarios WHERE usuario = "'.$usuario.'" AND contrasenia = "'.$contrasenia.'"')) {
+        if ($result = $conn -> query('SELECT usuario, pago FROM usuarios WHERE usuario = "'.$usuario.'" AND contrasenia = "'.$contrasenia.'"')) {
             while($obj = $result->fetch_object()){
                 if(isset($obj->usuario)){
                     $user = "true";
                     $_SESSION["user"] = $obj->usuario;
+                    $_SESSION["pago"] = $obj->pago;
                 };
             }
         }

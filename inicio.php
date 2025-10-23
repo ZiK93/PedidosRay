@@ -55,6 +55,7 @@
 
 
         <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/style2.css">
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>    
     </head>
     <body>
